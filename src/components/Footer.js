@@ -28,16 +28,16 @@ function Footer() {
                 <p>Open 7 Days - 8 am to 10 pm</p>
                 <p></p>
                 <div className = "row">
-                    <div className = "gallery ico">
+                    <div className = "gallery ico" style = {{width: "10%"}}>
                         <a href="https://facebook.com"><img src={facebook} alt="Forest" /></a>
                     </div>
-                    <div className = "gallery ico">
+                    <div className = "gallery ico" style = {{width: "10%"}}>
                         <a href="https://twitter.com"><img src={twitter} alt="Forest" /></a>
                     </div>
-                    <div className = "gallery ico">
+                    <div className = "gallery ico" style = {{width: "10%"}}>
                         <a href="https://au.linkedin.com"><img src={linkedin} alt="Forest" /></a>
                     </div>
-                    <div className = "gallery ico">
+                    <div className = "gallery ico" style = {{width: "10%"}}>
                         <a href="https://www.instagram.com"><img src={insta} alt="Forest" /></a>
                     </div>
                 </div>

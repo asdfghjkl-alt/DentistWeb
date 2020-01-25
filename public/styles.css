@@ -180,7 +180,7 @@ div.desc {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: cyan;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -196,10 +196,11 @@ div.desc {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: lightcyan;
   color: black;
   text-decoration: none;
   display: block;
+  border: 1px;
 }
 
 /* Show the dropdown menu on hover */
@@ -290,4 +291,24 @@ div.desc {
 
 .doctors {
   padding: 7% 0;
+}
+
+.boxshadow {
+  border: 1px solid;
+  padding: 10px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 5px 10px 18px grey;
+}
+
+p {
+  font-size: 130%;
+}
+
+.imageservice {
+  padding: 1%;
+}
+
+.imageservice:hover {
+  border-radius: 50%;
+  background-color: blue;
 }

@@ -1,39 +1,57 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import edward from "../images/IMG_2504.jpeg"
-import person from "../images/lady-img.jpg"
-import group from "../images/IMG_2385.jpeg"
+import about from "../images/about-us.jpg"
+import group from "../images/Family.jpg"
+import recycling from "../images/jw-recycling.jpg"
+import infection from "../images/infection-control.jpg"
+import Title from "./Title"
+import Footer from "./Footer"
 
 function About() {
   return (
     <div>
-      <div className="about" style={{backgroundImage: `url(${edward})`}}>
-          <div className = "image about" style={{padding: '10%'}} >
-              <h1>About Us</h1>
-              <p>Home / About us</p>
-          </div>
-      </div>
-      <div className = "description">
-        <div style = {{fontSize: '150%'}}>
-          <p>Edward Dental is <strong>completely about relationships, building relationships with you</strong>, our patient. We really spend most of our time trying to get to know you and what it is you are here for.</p>
-          <p></p>
-          <p>We have your best interest at heart. We are not a corporate or part of an insurance company. We are a private practice: a husband and wife team with our fellow associates. We only answer to you not to a board of directors or the insurance companies.</p>
-          <p></p>
-          <p>When you are a patient at our practice you become <strong>part of our family.</strong></p>
-          <p></p>
-          <p><strong>Some of our long term patients are dental-phobic, they return because our staff are understanding and reassuring we provide gentle dental care.</strong></p>
-          <p><strong>At Rawson Dental we want to exceed your expectations.</strong> We transform teeth into happy healthy confident smiles and thereby <strong></strong>changing people’s lives.</p>
-          <img src = {group} style = {{padding: "50%"}, {width: '30%'}}></img>
+      <Title 
+        title = "About Us"
+      />
+      <div className = "pad row">
+        <h5 style = {{textAlign: "center"}}><strong>Welcome to Mascot Dental Clinic, your friendly local dental clinic.We are a professional and comprehensive dental care team with a strong focus on oral health promotion.</strong></h5>
+        <div style = {{marginTop: "40px"}} className = "col-md-6">
+          <img style={{width: "100%"}} src = {group} />
         </div>
-        <div className = "doctors">
-          <h1 style = {{marginBottom: '30px'}}>Doctors: </h1>
-          <img src = {person} className = "icon" style = {{borderRadius: '50%'}} />
-          <div style = {{float: 'right'}, {fontSize: '120%'}}>
-            <h1>Doctor (insert name here)</h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <div className = "col-lg-6" style = {{marginTop: "40px"}}>
+          <p>We love seeing patients with a happy, healthy and satisfied smile. We will work with you to provide the care and service you deserve to help your teeth and mouths stay healthy. In particular, we are passionate about prevention. Getting a car serviced every year is cheaper than getting it fixed when something goes wrong – it’s the same with your teeth! That’s why we strongly encourage regular dental visits. If you want to keep your teeth for life, we’ll do our best to help you get there.</p>
+          <Link to ="/bookings/add">Book Now!</Link>
+        </div>
+        <div className = "row" style = {{marginTop: "40px"}}>
+          <div className = "col-md-6">
+            <p>Our team includes experienced dentists who graduated from various universities in Australia and New Zealand. We are a close-knit group who strive for excellence in dental care and work together to ensure the best treatment outcomes.</p>
+            <p>Our dental nurses are skilled at assisting the dentists in all aspects of dental treatment. They are also friendly and welcoming and can help with any queries you may have.</p>
+            <Link to ="/bookings/add">Book Now!</Link>
+          </div>
+          <div className = "col-md-6">
+            <img src = {about} style={{width: "100%"}} />
           </div>
         </div>
+        <div className = "row" style = {{marginTop: "40px"}}>
+          <div className = "col-md-6">
+            <img src = {recycling} style={{width: "100%"}} />
+          </div>
+          <div className = "col-md-6">
+            <p>Our team includes experienced dentists who graduated from various universities in Australia and New Zealand. We are a close-knit group who strive for excellence in dental care and work together to ensure the best treatment outcomes.</p>
+            <p>Our dental nurses are skilled at assisting the dentists in all aspects of dental treatment. They are also friendly and welcoming and can help with any queries you may have.</p>
+          </div>
+        </div>
+        <div className = "row" style = {{marginTop: "40px"}}>
+          <div className = "col-md-6">
+            <p>Our team includes experienced dentists who graduated from various universities in Australia and New Zealand. We are a close-knit group who strive for excellence in dental care and work together to ensure the best treatment outcomes.</p>
+            <p>Our dental nurses are skilled at assisting the dentists in all aspects of dental treatment. They are also friendly and welcoming and can help with any queries you may have.</p>
+          </div>
+          <div className = "col-md-6">
+            <img src = {infection} style={{width: "100%"}} />
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }

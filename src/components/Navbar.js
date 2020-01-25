@@ -2,42 +2,48 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-
   return (
     <nav style = {{position: "sticky"}} className='navbar navbar-dark bg-info navbar-expand-lg sticky'>
       <Link to='/' className='navbar-brand'>
-        <i class='fas fa-tooth'></i>
+        <i class='fas fa-tooth'></i> Epping
       </Link>
       <div className='collpase navbar-collapse'>
         <ul className='navbar-nav mr-auto'>
-          <li className='navbar-item'>
-            <Link to='/bookings' className='nav-link'>
-              Bookings
+          <li className = "navbar-item dropdown">
+            <Link to = "/about" className='nav-link dropbtn'>
+              About
             </Link>
+            <div className = "dropdown-content">
+              <a href="/about">Our Clinic</a>
+              <a href="/about/team">Meet Our Team</a>
+              <a href = "/about/ourtech">Our Tech</a>
+            </div>
           </li>
-          <li className='navbar-item'>
-            <Link to='/doctors/add' className='nav-link'>
-              Add Doctor
+          <li className = "navbar-item dropdown">
+            <Link to = "/offers" className='nav-link dropbtn'>
+              Offers
             </Link>
+            <div className = "dropdown-content">
+              <a href="/offers/invisalign">Invisalign</a>
+              <a href="/offers/plan">National Dental Plan</a>
+              <a href = "/offers/patient">New Patient Special</a>
+              <a href = "/offers/snore">Temporary Snoring</a>
+              <a href = "/offers/cdbs">Child Dental Benefits Schedule (CDBS)</a>
+            </div>
           </li>
-          <li className='navbar-item'>
-            <Link to='/doctors' className='nav-link'>
-              Doctors
-            </Link>
-          </li>
-          <li className='navbar-item dropdown'>
-            <Link to='#' className='nav-link dropbtn'>
+          <li className = "navbar-item dropdown">
+            <Link to = "/services" className='nav-link dropbtn'>
               Services
             </Link>
             <div className = "dropdown-content">
-              <a href="#">Porcelain Veneers</a>
-              <a href="#">General Dentistry</a>
-              <a href="#">Root Canal</a>
+              <a href="/services/fillings">Prevention, Fillings and Gum Disease</a>
+              <a href="/services/child">Children's Dentistry</a>
+              <a href = "/services/orthodontics">Orthodontics</a>
             </div>
           </li>
           <li>
-            <Link to = "/about" className='nav-link'>
-              About
+            <Link to = "/patients" className = 'nav-link'>
+              Patients
             </Link>
           </li>
         </ul>
@@ -48,7 +54,17 @@ function Navbar() {
             </Link>
             <div className = "dropdown-content">
               <a href="/bookings/add">Online Booking</a>
+                <Link to='/bookings'>Bookings</Link>
               <a href="/contact">Contact Us</a>
+            </div>
+          </li>
+          <li className='navbar-item dropdown'>
+            <Link to='/about' className='nav-link dropbtn'>
+              Doctors
+            </Link>
+            <div className = "dropdown-content">
+              <Link to='/doctors'>Doctors</Link>
+              <Link to='/doctors/add'>Add Doctor</Link>
             </div>
           </li>
           <li className='navbar-item'>

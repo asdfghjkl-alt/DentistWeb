@@ -15,7 +15,6 @@ router.get('/', async (req, res) => {
 router.post('/add', async (req, res) => {
   const newDoctor = new Doctor({ 
     doctorName: req.body.doctorName,
-    position: req.body.position
   });
   try {
     const newDoc = await newDoctor.save();
