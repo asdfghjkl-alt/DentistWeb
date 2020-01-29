@@ -1,4 +1,5 @@
 import React from 'react';
+import validator from "validator"
 
 function Contact() {
   return (

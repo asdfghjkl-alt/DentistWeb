@@ -12,9 +12,9 @@ app.use(express.json());
 
 async function connectDB() {
   try {
-    // const uri = process.env.ATLAS_URI;
-    // await mongoose.connect(uri, {
-    await mongoose.connect('mongodb://localhost:27017/mernDB', {
+    const uri = process.env.ATLAS_URI;
+    await mongoose.connect(uri, {
+    //await mongoose.connect('mongodb://localhost:27017/mernDB', {
       useNewUrlParser: true,
       useCreateIndex: true,
       useUnifiedTopology: true
@@ -29,7 +29,8 @@ connectDB();
 
 app.use('/bookings/', require('./routes/bookings'));
 app.use('/doctors/', require('./routes/doctors'));
+app.use('/patients/', require('./routes/patients'));
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on port: ${port}`);
 });

@@ -15,6 +15,7 @@ router.post('/add', async (req, res) => {
   const newBooking = new Booking({
     doctorName: req.body.doctorName,
     patientPhone: req.body.patientPhone,
+    patientName: req.body.patientName,
     date: req.body.date,
     timeSlot: req.body.timeSlot,
     treatmentType: req.body.treatmentType,

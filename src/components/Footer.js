@@ -21,7 +21,7 @@ function Footer() {
             <div className = "col-md-6 col-sm-12">
                 <h5>Contact Us</h5>
                 <hr/>
-                <a class = "call" href="tel:98693003">
+                <a className = "call" href="tel:98693003">
                     <h4>Call us: (02) 9869 3003</h4>
                 </a>
                 <p></p>

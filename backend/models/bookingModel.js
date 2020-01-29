@@ -4,6 +4,7 @@ const bookingSchema = new mongoose.Schema(
   {
     doctorName: { type: String, required: true },
     patientPhone: { type: String, required: true },
+    patientName: {type: String, required: true},
     date: { type: Date, required: true },
     timeSlot: { type: String, required: true },
     treatmentType: { type: String, required: true },

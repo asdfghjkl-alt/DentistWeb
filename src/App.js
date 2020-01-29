@@ -3,34 +3,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import bookingList from './components/BookingList';
-import bookingEdit from './components/BookingEdit';
-import bookingAdd from './components/BookingAdd';
-import doctorAdd from './components/DoctorAdd';
+import bookingList from './components/BookingsPage/BookingList';
+import bookingEdit from './components/BookingsPage/BookingEdit';
+import bookingAdd from './components/BookingsPage/BookingAdd';
+import doctorAdd from './components/DoctorPage/DoctorAdd';
 import contact from './components/Contact';
-import DoctorList from './components/DoctorList';
-import DoctorEdit from './components/DoctorEdit';
-import Home from './components/Home'
-import About from './components/About'
-import Porcelain from "./components/Porcelain"
-import PatientsList from "./components/PatientsList"
-import OurClinic from "./components/OurClinic"
-import OurTech from "./components/OurTech"
-import Invisalign from "./components/Invisalign"
-import Offers from "./components/Offers"
-import DentalPlan from "./components/DentalPlan"
-import NewPatient from "./components/NewPatient"
-import Services from "./components/Services"
-import GumDisease from "./components/GumDisease"
-import ChildrenDentist from "./components/ChildrenDentist"
-import Orth from "./components/Orth"
+import DoctorList from './components/DoctorPage/DoctorList';
+import DoctorEdit from './components/DoctorPage/DoctorEdit';
+import Home from './components/HomePage/Home';
+import About from './components/AboutPage/About';
+import PatientsList from "./components/PatientsPage/PatientsList";
+import PatientRegistration from "./components/PatientsPage/PatientRegistration"
+import OurClinic from "./components/AboutPage/OurClinic";
+import OurTech from "./components/AboutPage/OurTech";
+import Invisalign from "./components/Offers/Invisalign";
+import Offers from "./components/Offers/Offers";
+import DentalPlan from "./components/Offers/DentalPlan";
+import NewPatient from "./components/Offers/NewPatient";
+import Services from "./components/ServicesPage/Services";
+import GumDisease from "./components/ServicesPage/GumDisease";
+import ChildrenDentist from "./components/ServicesPage/ChildrenDentist";
+import Orth from "./components/ServicesPage/Orth";
 
 function App() {
   return (
     <Router>
       <div>
+        <div style = {{color: "white", backgroundColor: "black", textAlign: "center", zIndex: "1"}}>
+          Epping Dental Clinic
+        </div>
         <Navbar style = {{position: "sticky"}} />
-        <br />
         <Route exact path='/' component={Home} />
         <Route exact path='/bookings' component={bookingList} />
         <Route exact path='/bookings/add' component={bookingAdd} />
@@ -40,8 +42,8 @@ function App() {
         <Route exact path='/doctors' component={DoctorList} />
         <Route exact path='/doctors/edit/:id' component={DoctorEdit} />
         <Route exact path='/about' component = {About} />
-        <Route exact path = '/services/porcelain' component = {Porcelain} />
-        <Route exact path = "/patients" component = {PatientsList} />
+        <Route exact path = "/patients/list" component = {PatientsList} />
+        <Route exact path = "/patients/registration" component = {PatientRegistration} />
         <Route exact path = "/about/team" component = {OurClinic} />
         <Route exact path = "/about/ourtech" component={OurTech} />
         <Route exact path = "/offers/invisalign" component = {Invisalign} />
@@ -55,5 +57,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
+
 export default App;
