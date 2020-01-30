@@ -74,7 +74,7 @@ function EditUser() {
               type='text'
               required
               className='form-control'
-              name='username'
+              name='doctorName'
               value={user.username}
               onChange={onChange}
             />
